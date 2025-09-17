@@ -1,0 +1,73 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Treasure API",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Treasure/find": {
+      "post": {
+        "tags": [
+          "Treasure"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TreasureRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TreasureRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TreasureRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TreasureRequestDto": {
+        "type": "object",
+        "properties": {
+          "n": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "m": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "p": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "matrix": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

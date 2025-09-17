@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "WebApi.Controllers.TreasureController",
+    "Method": "FindTreasure",
+    "RelativePath": "api/Treasure/find",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Application.DTOs.TreasureRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
